@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './UsForms.css';
 import { Form, Col, Row, Container } from 'react-bootstrap';
+import BmiChart from '../BmiChart/BmiChart';
 
 const UsForms = () => {
     const [age, setAge] = useState('');
@@ -75,6 +76,7 @@ const UsForms = () => {
                     {bmi && (
                         <div className="mt-3">
                             <p className='font-bold text-xl'>BMI: {bmi}</p>
+                            <BmiChart bmi={bmi} />
                         </div>
                     )}
                 </Form>
